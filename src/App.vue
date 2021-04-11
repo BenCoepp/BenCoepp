@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <script data-ad-client="ca-pub-8970968926073433" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <vue-headful
       title="Ben Coepp"
       description="Ben Coepp - Portfolio"
