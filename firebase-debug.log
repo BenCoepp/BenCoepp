@@ -1,0 +1,80 @@
+[debug] [2021-07-20T15:36:22.580Z] ----------------------------------------------------------------------
+[debug] [2021-07-20T15:36:22.585Z] Command:       C:\Users\BENCOE~1\Desktop\HOLD_U~1\firebase-tools-instant-win.exe C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase deploy
+[debug] [2021-07-20T15:36:22.586Z] CLI Version:   9.16.0
+[debug] [2021-07-20T15:36:22.586Z] Platform:      win32
+[debug] [2021-07-20T15:36:22.586Z] Node Version:  v12.18.1
+[debug] [2021-07-20T15:36:22.588Z] Time:          Tue Jul 20 2021 17:36:22 GMT+0200 (GMT+02:00)
+[debug] [2021-07-20T15:36:22.589Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-20T15:36:22.718Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-20T15:36:22.718Z] > authorizing via signed-in user (bencoepp@gmail.com)
+[debug] [2021-07-20T15:36:22.719Z] [iam] checking project ben-coepp for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-07-20T15:36:22.722Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-07-20T15:36:22.723Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-20T15:36:22.961Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 20 Jul 2021 15:36:21 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-20T15:36:23.038Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-07-20T15:36:23.043Z] > refreshing access token with scopes: []
+[debug] [2021-07-20T15:36:23.043Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-20T15:36:23.186Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Tue, 20 Jul 2021 15:36:21 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-20T15:36:23.259Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-07-20T15:36:23.388Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\auth.js:141:12)
+    at refreshTokens (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\auth.js:448:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async Client.getAccessToken (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\apiv2.js:144:23)
+    at async Client.addAuthHeader (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\apiv2.js:135:21)
+    at async Client.request (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\apiv2.js:93:34)
+    at async Object.getFirebaseProject (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\commands\deploy.js:65:9)
+    at async C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\command.js:169:17
+[error] 
+[error] Error: Failed to get Firebase project ben-coepp. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-07-20T15:37:20.676Z] ----------------------------------------------------------------------
+[debug] [2021-07-20T15:37:20.681Z] Command:       C:\Users\BENCOE~1\Desktop\HOLD_U~1\firebase-tools-instant-win.exe C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase serve
+[debug] [2021-07-20T15:37:20.681Z] CLI Version:   9.16.0
+[debug] [2021-07-20T15:37:20.682Z] Platform:      win32
+[debug] [2021-07-20T15:37:20.682Z] Node Version:  v12.18.1
+[debug] [2021-07-20T15:37:20.684Z] Time:          Tue Jul 20 2021 17:37:20 GMT+0200 (GMT+02:00)
+[debug] [2021-07-20T15:37:20.685Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-20T15:37:20.782Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-20T15:37:20.782Z] > authorizing via signed-in user (bencoepp@gmail.com)
+[debug] [2021-07-20T15:37:20.782Z] [iam] checking project ben-coepp for permissions ["firebase.projects.get"]
+[debug] [2021-07-20T15:37:20.786Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-07-20T15:37:20.787Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-20T15:37:20.955Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Tue, 20 Jul 2021 15:37:19 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-20T15:37:21.029Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ben-coepp:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-07-20T15:37:22.918Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 20 Jul 2021 15:37:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=640","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-20T15:37:22.923Z] > refreshing access token with scopes: []
+[debug] [2021-07-20T15:37:22.923Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-20T15:37:23.034Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Tue, 20 Jul 2021 15:37:21 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-20T15:37:23.105Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-07-20T15:37:23.251Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\auth.js:141:12)
+    at refreshTokens (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\auth.js:448:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async Client.getAccessToken (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\apiv2.js:144:23)
+    at async Client.addAuthHeader (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\apiv2.js:135:21)
+    at async Client.request (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\apiv2.js:93:34)
+    at async Object.getFirebaseProject (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async getProjectNumber (C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\getProjectNumber.js:11:22)
+    at async C:\Users\Ben Coepp\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\command.js:169:17
+[error] 
+[error] Error: Failed to get Firebase project ben-coepp. Please make sure the project exists and your account has permission to access it.
